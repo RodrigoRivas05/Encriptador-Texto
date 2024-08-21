@@ -1,0 +1,390 @@
+/*--------------
+Fuentes de texto
+---------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Css Global*/
+:root{
+    --Font:#E5E5E5;
+    --White: #FFFFFF;
+    --Dark-Blue: #0A3871;
+    --Gray: #C5C5C5;
+    --Medium-Gray: #67808E;
+    --RGBA:rgba(0,0,0,0.08);
+    --White-Blue:#D8DFE8;
+    --Grey:#343A40;
+    --Gree:#495057;
+    --Blue-Gray:#232D3F;
+    --Space-Black:#0F0F0F;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Rubik';
+    background: var(--White);
+}
+
+::selection{
+    background: var(--Dark-Blue);
+    color: var(--White);
+}
+
+body{
+    height: 100%;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+/*Encabezado*/
+
+header{
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+    
+}
+
+/*Cuerpo principal de la página*/
+
+main{
+    display: flex;
+    flex-direction: row;
+    background: url(../imagenes/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.encriptador{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+.encriptar{
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--Gray);
+    border-radius: 15px;
+    resize: none;
+
+}
+
+.encriptar::placeholder,:focus{
+    color: var(--Dark-Blue);
+    opacity: 80%;
+}
+
+.encriptador-aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+
+}
+
+.texto-aviso{
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    opacity: 0.95;
+    color: var(--Medium-Gray);
+   
+}
+
+.encriptador-contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+}
+
+.btn-encriptar{
+    width: 300px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--White);
+    background: var(--Dark-Blue);
+    border: 1px, solid, var(--Dark-Blue);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px, 20px , 29px, -5px, var(--RGBA);
+
+}
+
+.btn-encriptar:hover{
+    background:var(--Blue-Gray);
+    transform: scale(0.96);
+}
+
+.btn-encriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Font), inset -3px -4px var(--Font);
+    color: var(--Font); 
+}
+
+.btn-desencriptar{
+    width: 300px;
+    height: 67px;
+    padding: 24px;
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--Space-Black);
+    background: var(--White-Blue);
+    border: 1px, solid, var(--White-Blue);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px, 20px , 29px, -5px, var(--RGBA);
+
+}
+
+.btn-desencriptar:hover{
+    background: var(--Blue-Gray);
+    transform: scale(0.96);
+    color: var(--White);
+}
+
+.btn-desencriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Font), inset -3px -4px var(--Font);
+    color: var(--Font);
+}
+
+.tarjeta{
+    width: 270px;
+    height: 580px;
+    background:var(--Font);
+    box-shadow: 10px 24px 32px -8px var(--Gree);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.tarjeta-contenedor{
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--Font);
+}
+
+.img-perso{
+    background: var(--Font);
+}
+
+.texto-uno{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Grey);
+    background: var(--Font);
+}
+
+.texto-dos{
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Medium-Gray);
+    background: var(--Font);
+}
+
+.evaluar{
+    width: 100%;
+    height: 480px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Gree);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus{
+    outline: none;
+}
+
+.btn-copiar{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--White-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 26px;
+    cursor: pointer;
+}
+
+.btn-copiar:hover{
+    background: var(--Medium-Gray);
+    border-color: var(--Medium-Gray);
+    transform: scale(0.96);  
+}
+
+/*  Footer  */
+
+footer{
+    margin-top: 100px;
+    padding: 5px;
+    border-top: 4px solid var(--Font);
+    color: var(--Grey);
+    text-align: center;
+    height: 5px;
+    font-size: 16px;
+    font-weight: 650;
+    color: var(--Grey);
+    background: var(--White);
+    
+}
+
+
+
+
+
+.linkedin:hover{
+    color: var(--Font);
+    opacity: 0.75;
+
+}
+
+.github:hover{
+    color: var(--Font);
+    opacity: 0.70;
+}
+
+/* MEDIA */
+
+@media  (max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .encriptador{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador-contenedor{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encriptador-aviso{
+        position: inherit;
+        margin: 15px;
+    }
+
+    .tarjeta{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .tarjeta-contenedor{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 650;
+    }
+
+    .img-perso{
+        display: none;
+    }
+
+    .btn-copiar{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+@media  (max-width: 720px){
+    header.logo{
+        width: 100%;
+        background: var(--White);
+        padding: 2px;
+    }
+
+    .encriptar{
+        width: 90%;
+        font-size: 22px;
+    }
+
+    .encriptador-contenedor{
+        display: grid;
+        gap: 21px;
+    }
+
+    .tarjeta{
+        width: 90%;
+    }
+
+    .copyright{
+        font-size: 20px;
+    }
+}
+    
+ 
